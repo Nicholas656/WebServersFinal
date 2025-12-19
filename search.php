@@ -15,7 +15,7 @@
     }
 
     $sql = "SELECT * FROM Searches;";
-    $result = mysql_query($conn, $sql);
+    $result = mysqli_query($conn, $sql);
     foreach($result as $row)
     {
         echo "<p>IP: {$row["IP"]}</p>";
