@@ -28,5 +28,7 @@
     $result = mysqli_query($conn, $command);
     mysqli_close($conn);
 
-    header("Location: https://www.google.com/search?{$toSendTerm}");
+    echo "<p>Location: https://www.google.com/search?{$toSendTerm}</p>";
+    
+    header("");
 ?>
