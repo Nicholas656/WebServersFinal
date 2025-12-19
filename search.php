@@ -28,7 +28,9 @@
     $result = mysqli_query($conn, $command);
     mysqli_close($conn);
 
-    echo "<p>Location: https://www.google.com/search?{$toSendTerm}</p>";
+    $forRedirdct = str_replace(" ", "+", $toSendTerm);
+
+    echo "<p>Location: https://www.google.com/search?{$forRedirdct}</p>";
 
     #header("");
 ?>
