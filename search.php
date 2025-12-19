@@ -17,7 +17,7 @@
     #POST request setup and handling
     if($_SERVER["REQUEST_METHOD"] == "GET")
     {
-        $searchTerm = htmlspecialchars($_POST["search"]);
+        $searchTerm = htmlspecialchars($_GET["search"]);
         $IP = $_SERVER["REMOTE_ADDR"];
         echo "<p>IP: {$IP}</p>";
         echo "<p>Term: {$searchTerm}</p>";
