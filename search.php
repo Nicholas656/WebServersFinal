@@ -30,5 +30,5 @@
 
     $forRedirdct = str_replace(" ", "+", $toSendTerm);
 
-    header("https://www.google.com/search?q={$forRedirdct}");
+    header("Location=https://www.google.com/search?q={$forRedirdct}");
 ?>
