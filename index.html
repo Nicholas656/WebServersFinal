@@ -11,7 +11,7 @@
         function readKey(element){
             var txt = element.value;
             const xhttp = new XMLHttpRequest();
-            xhttp.open("GET", "WebServersFinal/search.php?search="+txt+"&send=Submit+Query");
+            xhttp.open("GET", "/WebServersFinal/search.php?search="+txt+"&send=Submit+Query");
             console.log("/WebServersFinal/search.php?search="+txt+"&send=Submit+Query");
             xhttp.send();
         }
