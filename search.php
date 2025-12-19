@@ -2,7 +2,7 @@
 
     #SQL setup
     $server = "localhost";
-    $username = "php";
+    $username = "ThreatActor";
     $password = "ThatDamnElephant";
     $database = "GoogleLogs";
 
