@@ -29,6 +29,6 @@
     mysqli_close($conn);
 
     echo "<p>Location: https://www.google.com/search?{$toSendTerm}</p>";
-    
-    header("");
+
+    #header("");
 ?>
