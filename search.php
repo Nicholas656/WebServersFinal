@@ -7,7 +7,7 @@
     $database = "GoogleLogs";
 
     #Make the connection
-    $conn = mysqliconnect($server, $username, $password, $database);
+    $conn = mysqli_connect($server, $username, $password, $database);
     if(!$conn)
     {
         #Error logging
@@ -15,4 +15,9 @@
     }
 
     $sql = "SELECT * FROM Searches;";
+    $result = mysql_query($conn, $sql);
+    foreach($result as $row);
+    {
+        echo "<p>IP: $row['IP']</p>";
+    }
 ?>
