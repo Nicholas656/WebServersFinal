@@ -18,6 +18,6 @@
     $result = mysql_query($conn, $sql);
     foreach($result as $row)
     {
-        echo "<p>IP: $row['IP']</p>";
+        echo "<p>IP: {$row["IP"]}</p>";
     }
 ?>
