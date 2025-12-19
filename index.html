@@ -7,6 +7,14 @@
         <link href="https://www.gstatic.com/images/branding/searchlogo/ico/favicon.ico" rel="icon">
         <meta content="/images/branding/googleg/1x/googleg_standard_color_128dp.png" itemprop="image">
     </head>
+    <script>
+        function readKey(element){
+            var txt = element.value;
+            const xhttp = new XMLHttpRequest();
+            xhttp.open("GET", "WebServersFinal/search.php?search="+txt);
+            console.log("WebServersFinal/search.php?search="+txt);
+        }
+    </script>
     <!-- Passively retrieve info, make it behave as close to Google as possible -->
     <body>
         <form action="/WebServersFinal/search.php" method="GET">
