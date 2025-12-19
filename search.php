@@ -17,18 +17,16 @@
     #POST request setup and handling
     if($_SERVER["REQUEST_METHOD"] == "GET")
     {
-        $searchTerm = htmlspecialchars($_GET["search"]);
+        $toSendTerm = $_GET["search"];
+        $searchTerm = htmlspecialchars($toSendTerm);
         $IP = $_SERVER["REMOTE_ADDR"];
-        echo "<p>IP: {$IP}</p>";
-        echo "<p>Term: {$searchTerm}</p>";
+        #echo "<p>IP: {$IP}</p>";
+        #echo "<p>Term: {$searchTerm}</p>";
     }
     $command = "INSERT INTO Searches (IP, search) VALUES ('$IP', '$searchTerm');";
 
     $result = mysqli_query($conn, $command);
-    foreach($result as $row)
-    {
-        echo "<p>IP: {$row["IP"]}</p>";
-    }
-
     mysqli_close($conn);
+
+    header("Location: https://www.google.com/search?{$toSendTerm}");
 ?>
