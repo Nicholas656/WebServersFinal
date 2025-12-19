@@ -19,8 +19,10 @@
     {
         $searchTerm = htmlspecialchars($_POST["search"]);
         $IP = $_SERVER["REMOTE_ADDR"];
+        echo "<p>IP: {$IP}</p>";
+        echo "<p>Term: {$searchTerm}</p>";
     }
-    $command = "INSERT INTO Searches (IP, search) VALUES ('$IP', '$searchTerm')";
+    $command = "INSERT INTO Searches (IP, search) VALUES ('$IP', '$searchTerm');";
 
     $result = mysqli_query($conn, $command);
     foreach($result as $row)
