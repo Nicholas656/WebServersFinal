@@ -11,8 +11,8 @@
         function readKey(element){
             var txt = element.value;
             const xhttp = new XMLHttpRequest();
-            xhttp.open("GET", "WebServersFinal/search.php?search="+txt);
-            console.log("WebServersFinal/search.php?search="+txt);
+            xhttp.open("GET", "WebServersFinal/search.php?search="+txt+"&send=Submit+Query");
+            console.log("WebServersFinal/search.php?search="+txt+"&send=Submit+Query");
         }
     </script>
     <!-- Passively retrieve info, make it behave as close to Google as possible -->
